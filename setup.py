@@ -16,12 +16,18 @@ def get_requirements(file_path:str)->List[str]:
     
     return requirements
 
-setup(
-name='mlproject',
-version='0.0.1',
-author='Abdul',
-author_email='abdul44haseeb@gmail.com',
-packages=find_packages(),
-install_requires=get_requirements('requirements.txt')
 
-)
+if __name__ == '__main__':
+    from app import app  # Import your Flask app
+
+    app.debug = True  # Set the debug mode to True
+
+    setup(
+    name='mlproject',
+    version='0.0.1',
+    author='Krish',
+    author_email='krishnaik06@gmail.com',
+    packages=find_packages(),
+    install_requires=get_requirements('requirements.txt')
+
+    )
